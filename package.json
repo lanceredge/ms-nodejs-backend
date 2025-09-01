@@ -16,6 +16,15 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "test": "jest"
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": ["lcov", "text"],
+    "testMatch": ["**/?(*.)+(spec|test).[jt]s?(x)"],
+    "moduleFileExtensions": ["js", "json", "node"]
   }
 }
